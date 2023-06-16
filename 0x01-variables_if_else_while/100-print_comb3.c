@@ -6,24 +6,24 @@
  */
 int main(void)
 {
-	int dg1, dg2;
+	int n;
+	int i;
 
-	for (dg1 = 0; dg1 < 10; dg1++)
+	for (n = 0 ; n < 9 ; n++)
 	{
-		for (dg2 = 0; dg2 < 10; dg2++)
-		{
-			putchar((dg1 % 10) + '0');
-			putchar((dg2 % 10) + '0');
-
-			if (dg1 == 9 && dg2 == 9)
-				continue;
-
-			putchar(',');
-			putchar(' ');
-		}
+		i = n + 1;
+		do {
+			putchar('0' + n);
+			putchar('0' + i);
+			if (n < 8)
+			{
+				putchar(',');
+				putchar(32);
+			}
+			i++;
+		} while (i < 10);
 	}
-
 	putchar('\n');
-
 	return (0);
 }
+
