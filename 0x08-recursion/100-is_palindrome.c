@@ -4,7 +4,6 @@
  * palind2 - obtains length of a
  * @x: string
  * @l: integer to count length
- *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
