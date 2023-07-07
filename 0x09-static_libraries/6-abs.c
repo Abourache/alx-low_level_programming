@@ -1,16 +1,25 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 /**
  * _abs - This is a absolute value
  *
- * @n: This is the entry
+ * @a: This is the entry
  *
  * Return: Always 0.
  */
-int _abs(int n)
+
+int _abs(int a)
 {
-return (abs(n));
+	if (a > 0)
+	{
+		return (a);
+	}
+	else if (a < 0)
+	{
+		a = a * -1;
+		return (a);
+	}
+	else
+	{
+		return (a);
+	}
 }

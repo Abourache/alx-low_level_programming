@@ -1,15 +1,18 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 /**
  * _puts - Escribir un texto
  *
- * @s: This is my entry
+ * @str: This is my entry
  *
  */
-void _puts(char *s)
+
+void _puts(char *str)
 {
-puts(s);
+	int x;
+
+	for (x = 0; str[x] != '\0'; x++)
+	{
+		_putchar(str[x]);
+	}
+	_putchar('\n');
 }

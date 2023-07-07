@@ -1,8 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+#include <stddef.h>
 /**
  * _strchr - This is my funcion
  * @s: This my string of char
@@ -11,5 +8,12 @@
  */
 char *_strchr(char *s, char c)
 {
-return (strchr(s, c));
+	for (; ; s++)
+	{
+		if (*s == c)
+			return (s);
+		if (*s == 0)
+			return (NULL);
+	}
+	return (NULL);
 }

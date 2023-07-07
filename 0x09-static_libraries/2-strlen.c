@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+#include "main.h"
 /**
  * _strlen - This function is equal to strlen
  *
@@ -11,5 +8,10 @@
  */
 int _strlen(char *s)
 {
-return (strlen(s));
+	int i;
+
+	for (i = 0; s[i] != '\0' ; i++)
+	{
+	}
+	return (i);
 }

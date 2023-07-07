@@ -1,8 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 /**
  * _strcpy - Copiar el contenido de uno a otra variable
  * @dest: This is destiny
@@ -12,5 +8,14 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-return (strcpy(dest, src));
+	char *start = dest;
+
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+	return (start);
 }

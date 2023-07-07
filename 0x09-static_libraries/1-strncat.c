@@ -1,8 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+
 /**
  * _strncat - THis is the main
  * @dest: This is the dest
@@ -12,5 +9,19 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-return (strncat(dest, src, n));
+	int i, j;
+
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+	}
+	for (j = 0; j < n && src[j] != '\0'; j++)
+	{
+		dest[i] = src[j];
+		i++;
+	}
+	if (j < n)
+	{
+	dest[i] = '\0';
+	}
+	return (dest);
 }

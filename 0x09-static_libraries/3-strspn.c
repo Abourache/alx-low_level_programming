@@ -1,8 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 /**
  * _strspn - This is my function
  * @s: This is the string literal
@@ -10,7 +6,26 @@
  *
  * Return: This is the equal string to S
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-return (strspn(s, accept));
+	unsigned int x, y, z;
+
+	z = 0;
+	for (x = 0; s[x] != '\0'; x++)
+	{
+		for (y = 0; accept[y] != '\0'; y++)
+		{
+			if (accept[y] == s[x])
+			{
+				z++;
+				break;
+			}
+		}
+		if (accept[y] != s[x])
+		{
+		break;
+		}
+	}
+	return (z);
 }

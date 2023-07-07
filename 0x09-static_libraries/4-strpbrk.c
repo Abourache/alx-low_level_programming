@@ -1,8 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+#include <stddef.h>
 /**
  * _strpbrk - This is my function
  * @s: This is my entry
@@ -11,5 +8,17 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-return (strpbrk(s, accept));
+	unsigned int x, y;
+
+	for (x = 0; s[x] != '\0'; x++)
+	{
+		for (y = 0; accept[y] != '\0'; y++)
+		{
+			if (accept[y] == s[x])
+			{
+				return (&s[x]);
+			}
+		}
+	}
+	return (NULL);
 }
